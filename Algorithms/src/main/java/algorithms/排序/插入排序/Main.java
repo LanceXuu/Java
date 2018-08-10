@@ -1,4 +1,4 @@
-package algorithms.插入排序;
+package algorithms.排序.插入排序;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
