@@ -29,6 +29,7 @@ public class Example
 
     public static void sort(Comparable[] a)
     {
+        //不同算法的主体程序不同
 
     }
 

@@ -1,4 +1,4 @@
-package 华为笔试题.进制转换;
+package 校招.华为笔试题.进制转换;
 
 import java.util.Scanner;
 

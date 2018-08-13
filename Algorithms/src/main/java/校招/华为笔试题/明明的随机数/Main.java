@@ -1,4 +1,4 @@
-package 华为笔试题.明明的随机数;
+package 校招.华为笔试题.明明的随机数;
 
 import java.util.Arrays;
 import java.util.Scanner;

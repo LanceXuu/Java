@@ -1,4 +1,4 @@
-package 华为笔试题.小偷偷东西;
+package 校招.华为笔试题.小偷偷东西;
 
 import java.util.Collections;
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-package 华为笔试题.汽水瓶;
+package 校招.华为笔试题.汽水瓶;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package 华为笔试题.大小写切换;
+package 校招.华为笔试题.大小写切换;
 
 import java.util.Scanner;
 
