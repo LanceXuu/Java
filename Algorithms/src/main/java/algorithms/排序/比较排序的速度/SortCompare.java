@@ -27,7 +27,7 @@ public class SortCompare
 
     }
 
-    public static double time(String alg, Comparable[] a)
+    public static double time(String alg, Double [] a)
     {
 //        Stopwatch timer = new Stopwatch();
 
@@ -61,9 +61,9 @@ public class SortCompare
         double total = 0.0;
         Double[] a = new Double[N];
 
-        for (int i = 0; i < T; i++)
+        for (int i = 1; i < T; i++)
         {
-            for (int j = 0; j < N; j++)
+            for (int j = 1; j < N; j++)
             {
                 a[j] = Math.random();
                 total += time(alg, a);
