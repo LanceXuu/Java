@@ -1,4 +1,4 @@
-package 校招.网易笔试题;
+package 校招.网易笔试题.俄罗斯方块;
 
 import java.util.Arrays;
 import java.util.Scanner;
