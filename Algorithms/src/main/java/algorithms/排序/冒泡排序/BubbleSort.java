@@ -8,24 +8,23 @@ public class BubbleSort
 {
     public static void main(String[] args)
     {
-        int[] numbers = {1, 6, 3, 4, 5};
+        int[] numbers = {1, 6, 3, 4, 5, 6, 7, 2, 8, 99, 44};
         sort(numbers);
         show(numbers);
     }
 
     public static void sort(int[] numbers)
     {
-        int temp = 0;
-        int size = numbers.length;
-        for (int i = 0; i < size - 1; i++)
+        int k = numbers.length;
+
+        for (int i = 0; i < k - 1; i++)
         {
-            for (int j = 0; j < size - 1 - i; j++)
+            for (int j = 0; j < k - 2; j++)
             {
-                if (numbers[j] > numbers[j + 1])  //交换两数位置
+                if (numbers[k - 1 - j] < numbers[k - 2 - j])
                 {
-                    temp = numbers[j];
-                    numbers[j] = numbers[j + 1];
-                    numbers[j + 1] = temp;
+                    change(numbers, k - 1 - j, k - 2 - j);
+
                 }
             }
         }
@@ -64,6 +63,20 @@ public class BubbleSort
             System.out.println(a[i] + " ");
         }
 
+    }
+
+    /**
+     * 变换2个元素位置
+     *
+     * @param i
+     * @param j
+     */
+    private static void change(int[] numbers, int i, int j)
+    {
+        int temp;
+        temp = numbers[i];
+        numbers[i] = numbers[j];
+        numbers[j] = temp;
     }
 
 
