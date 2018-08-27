@@ -1,67 +1,48 @@
 package 校招.头条.手串;
 
-import java.util.*;
-
 /**
  * @Author: Lance
- * @Date: 2018/8/23 15:01
+ * @Date: 2018/8/23 11:04
  */
 
-/**
- * 思路：
- * 1. 相同的颜色不能连续的出现在相邻的串珠，//考虑到串珠是环形的
- * 2. 那么，我们设置map---KEY：key为颜色
- * Value：为list--list存储颜色出现在哪里
- * 3. 遍历list，比较list相邻间的值（为什么比较相邻间的值，因为要求是任一颜色连续m个串珠至多一次），
- * 是否小于m；
- */
-public class Main
+import java.util.*;
+
+public class Test
 {
+
+
     public static void main(String[] args)
     {
-        Scanner scanner = new Scanner(System.in);
-
-        int n = scanner.nextInt();
-        int m = scanner.nextInt();
-        int c = scanner.nextInt();
-
-        Map<Integer, List<Integer>> map = new HashMap<>();
+        // TODO Auto-generated method stub
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();    //n个串珠
+        int m = sc.nextInt();    //手串上的任意一种颜色（不包含无色），在任意连续的m个串珠里至多出现一次
+        int c = sc.nextInt();    //颜色一共有c种
         int count = 0;
-
+        Map<Integer, List<Integer>> map = new HashMap<>();
         for (int i = 0; i < n; i++)
         {
-            int colorNumbers = scanner.nextInt();
-
-            if (colorNumbers == 0)
+            int num = sc.nextInt();
+            for (int j = 0; j < num; j++)
             {
-                continue;
-            }
-            for (int j = 1; j <= colorNumbers; j++)
-            {
-                int key = scanner.nextInt();
-
+                int key = sc.nextInt();
                 if (!map.containsKey(key))
                 {
-                    List<Integer> list = new LinkedList();
+                    List<Integer> list = new ArrayList<>();
                     list.add(i);
                     map.put(key, list);
-
                 }
                 else
                 {
                     List<Integer> list = map.get(key);
                     list.add(i);
-                    map.put(key, list);
                 }
             }
         }
-
-        //开始对比
         for (int i = 1; i <= c; i++)
         {
             boolean flag = false;
             List<Integer> list = map.get(i);
-
             if (list.size() == 1)
             {
                 continue;
@@ -70,7 +51,6 @@ public class Main
             {
                 for (int j = 0; j < list.size() - 1; j++)
                 {
-
                     if (list.get(j + 1) - list.get(j) < m)
                     {
                         count++;
@@ -78,20 +58,18 @@ public class Main
                         break;
                     }
                 }
-
                 if (!flag)
                 {
-                    if (n - list.get(list.size() - 1) + list.get(0) < m)
+                    if ((n - list.get(list.size() - 1) + list.get(0)) < m)
                     {
                         count++;
                     }
                 }
             }
-
-
         }
-
 
         System.out.println(count);
     }
+
 }
+
