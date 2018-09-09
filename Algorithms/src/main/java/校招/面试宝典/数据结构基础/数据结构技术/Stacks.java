@@ -18,7 +18,13 @@ public class Stacks
             stack.push(mothons[i] + " ");
         }
         stack.addElement("The last line");
-        System.out.println("element  5 = " + stack.elements());
+
+        System.out.println("element  5 = " + stack.elementAt(5));
+        System.out.println("popping elements: ");
+
+        while(!stack.empty())
+            System.out.println(stack.pop());
+
 
 
     }

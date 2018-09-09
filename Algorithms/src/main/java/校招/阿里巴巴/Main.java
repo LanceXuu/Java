@@ -18,7 +18,7 @@ public class Main
         int count = scanner.nextInt();
         int[] flag = new int[count];
 
-        Map<Integer,Integer> map = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < count; i++)
         {
@@ -32,7 +32,7 @@ public class Main
             tempInt01 = Integer.parseInt(tenpString[1]);
 
 
-            map.put(tempInt,tempInt01);
+            map.put(tempInt, tempInt01);
 
         }
     }
