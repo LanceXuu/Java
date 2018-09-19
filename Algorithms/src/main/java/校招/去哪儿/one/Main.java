@@ -16,7 +16,6 @@ public class Main
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
 
-        LinkedList
         String str = bufferedReader.readLine();
 //
 //        StringBuilder s = new StringBuilder();
